@@ -13,7 +13,7 @@ function Get-GDrive
 while (!$(Get-GDrive))
 {
     # Does we wait too long?
-    if ((Get-Date).Second - $start -gt 60*3)
+    if (((Get-Date).Second - $start) -gt 60*3)
     {
 	Write-Verbose "GDrive wasn't found!"
         exit
