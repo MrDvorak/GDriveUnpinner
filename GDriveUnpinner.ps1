@@ -12,7 +12,7 @@ function Get-GDrive
 # Wait for GDrive to Quick access pipping
 while (!$(Get-GDrive))
 {
-    # Does we wait too long?
+    # Are we waiting too long?
     if (((Get-Date).Second - $start) -gt 60*3)
     {
 	Write-Verbose "GDrive wasn't found!"
